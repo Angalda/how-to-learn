@@ -1,3 +1,25 @@
+/*--------------------Обнуление-----------------------------------*/
+h1, h2, h3, h4, h5, p, div {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+ text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+/*---------------------------------------------------------------*/
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -9,17 +31,237 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+/*-------------------------------Header----------------------------*/
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
+  background-color: #f2f2f2;
+  padding-left: 64px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  width: 183px;
+  height: 32px;
+  z-index: 1;
+}
+
+.logo_place_header {
+  background-image: url(../images/logo_place_header.svg);
+  position:absolute;
+  top: 30px;
+  left: 64px;
+}
+
+.header__title {
+  width: 730px;
+  font-size: 65px;
+  line-height: 130px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.header__subtitle {
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  width: 388px;
+  font-size: 18px;
+  line-height: 25px;
+  z-index: 10;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.header__main-illustration {
+  background-image: url(../images/header-image.png);
+  position: absolute;
+  background-size: cover;
+  right: 0;
+  bottom: 0;
+  width: 765px;
+  height: 608px;
+  z-index: 1;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   height: 568px;
   width: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  right: 0;
+  top: 64px;
+
+}
+/*----------------------description-------------------------*/
+.description {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.two-columns {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  width: 175px;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #2f80ed;
+}
+.two-columns__brief h2 {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.two-columns__paragraph:not(:last-child) {
+  padding-bottom: 30px;
+}
+
+.two-columns__span-accent {
+  font-weight: bold;
+}
+
+/*-------------------------Digits--------------------------*/
+
+.digits {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 60px;
+  font-weight: 1.15;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  line-height: 34px;
+  padding-top: 20px;
+}
+
+.table {
+  display: flex;
+  width: 1100px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.table__cell {
+  padding-top: 60px;
+  width: 250px;
+}
+
+.table__heading {
+  padding-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.table__text {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.table__text p {
+  padding-bottom: 20px;
+
+}
+
+.table__text p:last-of-type {
+  padding-bottom:0;
+}
+
+/*------------------------------Feynman------------------------*/
+
+.feynman {
+  min-height: 890px;
+  background-color: #f2f2f2;
+  background-image: url(../images/feynman.png);
+  background-position: bottom 0 left 0;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.feynman__title {
+  min-width: 648px;
+  font-size: 120px;
+  line-height: 1.15;
+  font-weight: bold;
+  text-align: center;
+}
+
+.feynman__subtitle {
+  font-size: 36px;
+  line-height: 51px;
+  padding-top: 70px;
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+}
+
+.feynman__link a {
+  color: #2f80ed;
+  text-decoration: none;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+/*----------------------------Kaufman------------------------*/
+
+.kaufman {
+ background-color: #1f1f1f;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ padding-bottom: 100px;
+ flex-direction: column;
+ align-items: center;
+ padding: 90px 0;
+ overflow: hidden;
+ position: relative;
+}
+
+.kaufman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
+  width: 877px;
+  height: 877px;
+  position: absolute;
+  right: -210px;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -27,5 +269,94 @@
   width: 200px;
   color: white;
   margin-right: 0;
-  margin-top: 80px;
+  padding-top: 80px;
+  z-index: 1;
+}
+
+.section-title-theme_dark {
+  color: white;
+  z-index: 1;
+
+}
+
+.section-subtitle-theme_dark {
+  color: white;
+  z-index: 1;
+}
+
+/*---------------------------Footer---------------------*/
+.footer {
+  width: 100%;
+  padding: 60px 0 40px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #1f1f1f;
+}
+
+.footer__columns {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.footer__column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+.footer__column-right {
+  display: flex;
+}
+
+.footer_content_info {
+  position: relative;
+  left: -150px;
+}
+
+.logo_place-footer {
+  background-image: url(../images/logo_place_footer.svg);
+}
+
+.footer__column-heading,
+.footer__social-icons     {
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.column-links a {
+  color: white;
+}
+
+.column-link a {
+color: white;
+}
+
+.footer__social-icon {
+  display: flex;
+  align-items: center;
+
+}
+.footer__icon-item {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.social-icon_facebook {
+  background-image: url(../images/facebook_color_white.svg);
+}
+
+.social-icon_vk {
+  background-image: url(../images/vk_color_white.svg);
+}
+
+.social-icon_instagram {
+  background-image: url(../images/instagram_color_white.svg);
 }
