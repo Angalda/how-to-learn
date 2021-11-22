@@ -1,12 +1,7 @@
 /*--------------------Обнуление------------------------------------*/
-h1, h2, h3, h4, h5, p, div {
-  padding: 0;
-  margin: 0;
-}
 
-li {
-  list-style-type: none;
-}
+
+
 
 ul {
   margin: 0;
@@ -18,6 +13,7 @@ a {
   padding: 0;
   margin: 0;
 }
+
 /*------------------------------------------------------------------*/
 
 .page {
@@ -59,8 +55,8 @@ a {
 
 .header__title {
   width: 730px;
-  font-size: 65px;
-  line-height: 130px;
+  font-size: 102px;
+  line-height: 96px;
   font-weight: bold;
   z-index: 10;
 }
@@ -158,13 +154,15 @@ a {
 
 .section-title {
   font-size: 60px;
-  font-weight: 1.15;
+  font-weight: bold;
+  line-height: 1.15;
 }
 
 .section-subtitle {
   font-size: 24px;
   line-height: 34px;
   padding-top: 20px;
+  font-weight: normal;
 }
 
 .table {
@@ -190,13 +188,9 @@ a {
   line-height: 1.2;
 }
 
-.table__text p {
-  padding-bottom: 20px;
+.table__text_source {
+  padding-top: 20px;
 
-}
-
-.table__text p:last-of-type {
-  padding-bottom:0;
 }
 
 /*------------------------------Feynman------------------------*/
@@ -258,6 +252,7 @@ a {
 
 .kaufman__triangle {
   background-image: url(../images/kaufman-triangle.svg);
+  background-size: cover;
   width: 877px;
   height: 877px;
   position: absolute;
@@ -311,11 +306,12 @@ a {
 
 .footer__column-right {
   display: flex;
+  width: 40%;
+  justify-content: space-between;
 }
 
 .footer_content_info {
-  position: relative;
-  left: -150px;
+   min-width: 30%;
 }
 
 .logo_place-footer {
@@ -326,14 +322,23 @@ a {
 .footer__social-icons     {
   padding-bottom: 20px;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .column-links a {
   color: white;
 }
 
-.column-link a {
+.column_link {
 color: white;
+margin: 0;
+padding: 0;
+}
+
+.footer_content_social {
+  min-width: 30%;
+  box-sizing: border-box;
 }
 
 .footer__social-icon {
@@ -347,6 +352,11 @@ color: white;
   width: 20px;
   height: 20px;
   margin-right: 5px;
+}
+
+.social-icon_text {
+padding: 0 0 0 26px;
+
 }
 
 .social-icon_facebook {
