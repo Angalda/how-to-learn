@@ -1,3 +1,4 @@
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -7,6 +8,7 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  width: 100%;
 }
 
 /*-------------------------------Header----------------------------*/
@@ -32,12 +34,13 @@
 .logo_place_header {
   background-image: url(../images/logo_place_header.svg);
   position:absolute;
+  background-repeat: no-repeat;
   top: 30px;
   left: 64px;
 }
 
 .header__title {
-  width: 730px;
+  max-width: 730px;
   font-size: 102px;
   line-height: 96px;
   font-weight: bold;
@@ -48,7 +51,7 @@
   position: absolute;
   bottom: 30px;
   left: 64px;
-  width: 388px;
+  max-width: 388px;
   font-size: 18px;
   line-height: 25px;
   z-index: 10;
@@ -65,8 +68,8 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 765px;
-  height: 608px;
+  max-width: 765px;
+  max-height: 608px;
   z-index: 1;
 }
 
@@ -166,7 +169,9 @@
 
 .table {
   display: flex;
-  width: 1100px;
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 60px;
@@ -174,7 +179,8 @@
 }
 
 .table__cell {
-  width: 250px;
+  max-width: 250px;
+  width: 100%;
 }
 
 .table__heading {
@@ -210,7 +216,7 @@
 }
 
 .feynman__title {
-  width: 648px;
+  max-width: 648px;
   font-size: 120px;
   line-height: 1.15;
   font-weight: bold;
@@ -277,10 +283,9 @@
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
-  width: 200px;
+  max-width: 200px;
   color: white;
   margin-right: 0;
-
   z-index: 1;
 }
 
@@ -304,6 +309,7 @@
 /*---------------------------Footer---------------------*/
 .footer {
   width: 100%;
+  min-height: 350px;
   padding: 60px 0 40px;
   display: flex;
   justify-content: center;
@@ -332,7 +338,7 @@
 .footer__author {
   font-size: 18px;
   line-height: 30px;
-  width: bold;
+  font-weight: normal;
 }
 
 .footer__column-heading {
@@ -343,6 +349,8 @@
 .footer__column-links {
   display: flex;
   flex-direction: column;
+  margin: 0 0 16px 0;
+  padding: 0;
 }
 
 .footer__column-link {
@@ -357,15 +365,17 @@
   margin: 0;
 
 }
+.footer__social-icons {
+  margin: 0 0 16px 0;
+  padding: 0;
+}
 
 .footer__social-icon {
 width: 16px;
 height: 16px;
-z-index: 1;
-padding-right: 10px;
-width: auto;
 padding: 0;
-margin: 0;
+width: 16px;
+margin: 0 5px 0;
 }
 
 .footer__social-icon-item {
